@@ -1,50 +1,115 @@
-.component-container {
+/* General container styles */
+.container {
+  display: flex;
   margin-top: 50px;
-  text-align: center;
-}
-.textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
 }
 
-.buttonconvert {
-  margin-right: 10px;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
+.left-pane {
+  flex: 2;
+  padding: 20px;
 }
-.text-input {
-  margin-right: 10px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-.sidebar {
+
+.right-pane {
   flex: 1;
   padding: 20px;
   border-left: 1px solid #ccc;
 }
-.sidebar-entry p {
-  margin: 5px 0;
+
+/* Converter form and result styles */
+.component-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
+.text-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonconvert {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4Caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buttonconvert:hover {
+  background-color: #4Caf50;
+}
+
+.audio-container {
+  margin-top: 20px;
+}
+
+/* Heading with logo styles */
+.heading-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading-with-logo img {
+  width: 60px;
+  height: 60px;
+}
+/* Sidebar styles */
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.sidebar-entry {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .text-spacing {
-  margin-bottom: 10px; /* Adjust this value for desired spacing */
+  margin-bottom: 5px;
 }
-.sidebar-entry .saved-link {
-  color:  rgb(1, 101, 141);
+
+.saved-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.saved-link:hover {
   text-decoration: underline;
 }
 
-.sidebar-entry .saved-link:hover {
-  color: darkblue;
-}
-
 .buttondelete {
-  background-color: rgb(233, 25, 25);
   padding: 5px 10px;
+  font-size: 14px;
+  background-color: #dc3545;
   color: white;
   border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttondelete:hover {
+  background-color: #c82333;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 14px;
 }

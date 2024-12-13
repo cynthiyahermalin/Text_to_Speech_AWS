@@ -17,11 +17,11 @@ const App = () => {
   };
 
   return (
-    <div style={{ display: "flex", marginTop: "50px" }}>
-      <div style={{ flex: 2, padding: "20px" }}>
+    <div className="container">
+      <div className="left-pane">
         <ConverterFormAndResult onSave={handleSaveEntry} setError={setError} />
       </div>
-      <div style={{ flex: 1, padding: "20px", borderLeft: "1px solid #ccc" }}>
+      <div className="right-pane">
         <SavedTextListAndEntry
           entries={savedEntries}
           onDelete={handleDeleteEntry}

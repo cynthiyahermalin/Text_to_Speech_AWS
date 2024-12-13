@@ -14,7 +14,7 @@ TABLE_NAME = 'your_dynamo_table_name'
 def lambda_handler(event, context):
     method = event['httpMethod']
     cors_headers = {
-        'Access-Control-Allow-Origin': '*', 
+        'Access-Control-Allow-Origin': '*'
         'Access-Control-Allow-Methods': 'OPTIONS,POST,GET,DELETE',
         'Access-Control-Allow-Headers': 'Content-Type'
     }

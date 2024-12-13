@@ -8,7 +8,6 @@ const SavedTextListAndEntry = ({ entries, onDelete, error }) => {
       {entries.map((entry) => (
         <div key={entry.id} className="sidebar-entry">
           <p className="text-spacing">
-          
             <strong>ID:</strong> {entry.id}
           </p>
           <p className="text-spacing">
@@ -16,25 +15,24 @@ const SavedTextListAndEntry = ({ entries, onDelete, error }) => {
           </p>
           <p className="text-spacing">
             <strong>Audio URL:</strong>{" "}
-            <a 
-                href={entry.audioUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="saved-link"
-                >
-                {entry.audioUrl}
+            <a
+              href={entry.audioUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="saved-link"
+            >
+              {entry.audioUrl}
             </a>
           </p>
           <button
             className="buttondelete"
             onClick={() => onDelete(entry.id)}
-            
           >
             Delete
           </button>
         </div>
       ))}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="error">{error}</p>}
     </div>
   );
 };

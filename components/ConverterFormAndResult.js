@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import img1 from '../image/tts.png';
 import {API_URL} from '../utils.js';
 
 const ConverterFormAndResult = ({ onSave, setError }) => {
@@ -21,8 +22,11 @@ const ConverterFormAndResult = ({ onSave, setError }) => {
   };
 
   return (
-    <div> 
-      <h1>Text-to-Speech Converter</h1>
+    <div>
+      <div className="heading-with-logo">
+        <img src={img1} alt="" />
+        <h1>Text-to-Speech Converter</h1>
+      </div>
       <div className="component-container">
         <input
           className="text-input"
@@ -39,9 +43,11 @@ const ConverterFormAndResult = ({ onSave, setError }) => {
           onChange={(e) => setText(e.target.value)}
         ></textarea>
       </div>
-      <button  className="buttonconvert" onClick={handleConvert}>Convert to Speech</button>
+      <button className="buttonconvert" onClick={handleConvert}>
+        Convert to Speech
+      </button>
       {audioUrl && (
-        <div>
+        <div className="audio-container">
           <h3>Generated Audio:</h3>
           <audio controls>
             <source src={audioUrl} type="audio/mpeg" />
