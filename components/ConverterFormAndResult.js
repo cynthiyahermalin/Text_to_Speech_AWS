@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import img1 from '../image/tts.png';
+import image from '../image/tts.png';
 import {API_URL} from '../utils.js';
 
 const ConverterFormAndResult = ({ onSave, setError }) => {
@@ -24,7 +24,7 @@ const ConverterFormAndResult = ({ onSave, setError }) => {
   return (
     <div>
       <div className="heading-with-logo">
-        <img src={img1} alt="" />
+        <img src={image} alt="" />
         <h1>Text-to-Speech Converter</h1>
       </div>
       <div className="component-container">
