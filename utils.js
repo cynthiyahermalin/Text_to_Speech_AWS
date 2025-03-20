@@ -1,1 +1,1 @@
-export const API_URL='https://pq4uuuass8.execute-api.ap-south-1.amazonaws.com/prod';
+export const API_URL='https://{api-id}.execute-api.{region}.amazonaws.com/{stage-name}/{resource-path}';
